@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from '@emotion/styled';
+import About from './components/About/About';
+import Header from './components/Header/Header';
+import WorkExperience from './components/WorkExperience/WorkExperience';
+import WhatIKnow from './components/WhatIKnow/WhatIKnow';
+import { ChakraProvider } from '@chakra-ui/react';
+import VolunteerWork from './components/VolunteerWork/VolunteerWork';
+
+const StyledApp = styled.div`
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <StyledApp>
+        <Header name="Nir Tzezana" title="Full Stack Software Engineer" />
+        <About />
+        <WorkExperience />
+        <WhatIKnow />
+        <VolunteerWork />
+      </StyledApp>
+    </ChakraProvider>
   );
 }
 
