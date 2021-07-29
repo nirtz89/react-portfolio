@@ -1,4 +1,5 @@
 {
+  "homepage": "http://nirtz89.github.io/react-portfolio",
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -24,6 +25,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "gh-pages": "^3.2.3"
   }
 }
