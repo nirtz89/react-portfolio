@@ -37,28 +37,32 @@
                     "title": "Fullstack Software Enginneer",
                     "startingYear": 2020,
                     "endingYear": null,
-                    "showWorkplaceName": false
+                    "showWorkplaceName": false,
+                    "showWorkplaceImage": true
                 },
                 {
                     "company": "AT&T",
                     "title": "Front End Engineer",
                     "startingYear": 2019,
                     "endingYear": 2020,
-                    "showWorkplaceName": false
+                    "showWorkplaceName": false,
+                    "showWorkplaceImage": true
                 },
                 {
                     "company": "Plus500",
                     "title": "Front End Engineer",
                     "startingYear": 2017,
                     "endingYear": 2019,
-                    "showWorkplaceName": false
+                    "showWorkplaceName": false,
+                    "showWorkplaceImage": true
                 },
                 {
                     "company": "Intel",
                     "title": "Student Software Engineer",
                     "startingYear": 2017,
                     "endingYear": 2017,
-                    "showWorkplaceName": false
+                    "showWorkplaceName": false,
+                    "showWorkplaceImage": true
                 }
             ],
             "title": "My Work Experience"

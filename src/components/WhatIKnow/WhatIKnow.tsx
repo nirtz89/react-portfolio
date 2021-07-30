@@ -8,7 +8,7 @@ import WhatIKnowItem, { EWhatIKnowItemType, IWhatIKnowItem } from './WhatIKnowIt
 import WhatIKnowListGroupContainer from './WhatIKnowListGroupContainer';
 
 const StyledWhatIKnow = styled.div`
-    margin: 3em 0;
+    margin: 3em 0 0 0;
     width: 100%;
 `;
 

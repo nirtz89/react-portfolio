@@ -25,5 +25,5 @@ export const themeConfig = {
 }
 
 export const config = {
-    theme: Theme.ABSTRACT
+    theme: Theme.DESERT
 }

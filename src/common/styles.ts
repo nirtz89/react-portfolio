@@ -63,8 +63,8 @@ export const StyledBackgroundTopper = styled.div`
 `;
 
 interface IStyledParagraphOverridePrpops {
-    paddingTop?: number;
-    paddingBottom?: number;
+    paddingTop?: number | string;
+    paddingBottom?: number | string;
 }
 
 export const StyledParagraph = styled.p<IStyledParagraphOverridePrpops>`

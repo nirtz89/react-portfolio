@@ -9,6 +9,7 @@ export interface IWorkplace {
     startingYear: number;
     endingYear: number | null;
     showWorkplaceName?: boolean;
+    showWorkplaceImage?: boolean;
 }
 export interface IWorkExperienceProps {
     type: string,
@@ -24,7 +25,7 @@ const WorkExperience = ({data, title}: IWorkExperienceProps) => {
                 <StyledTitle>{title}</StyledTitle>
                 {
                     data.map((wp, index) => 
-                        <Workplace key={index} company={wp.company} title={wp.title} starting={wp.startingYear} ending={wp.endingYear} showWpName={wp.showWorkplaceName} isLast={index === data.length-1}/>
+                        <Workplace key={index} {...wp} isLast={index === data.length-1}/>
                     )
                 }
             </StyledBackgroundTopper>

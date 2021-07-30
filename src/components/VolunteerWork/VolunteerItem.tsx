@@ -19,6 +19,7 @@ const StyledVolunteerItem = styled.div`
     }
     span {
         font-size: 15px;
+        text-align: center;
     }
 `;
 
