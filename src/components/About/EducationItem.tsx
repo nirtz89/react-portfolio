@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 
-interface IEducationItem {
+export interface IEducationItem {
     title: string;
     institute: string;
-    startingYear: number;
-    endingYear: number;
+    startingYear: string;
+    endingYear: string | null;
 }
 
 const StyledEducationItem = styled.div`
@@ -13,7 +13,7 @@ const StyledEducationItem = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 1em;
     h3 {
         font-size: 18px;
         margin-bottom: .5em;

@@ -1,0 +1,164 @@
+{
+    "header": {
+        "name": "Nir Tzezana",
+        "title": "Full Stack Software Engineer",
+        "showProfilePic": true,
+        "cvLink": "http://www.walla.co.il"
+    },
+    "modules": [
+        {
+            "type": "about",
+            "data": {
+                "about": "I'm Nir, I hold a BSc in Information systems. I'm an avid learner, I like what I do and I'm not afraid of trying out new technologies and adopting them as I see fit. I currently work as a Full stack Engineer at Microsoft™.",
+                "education": {
+                    "title": "Education",
+                    "data": [
+                    {
+                        "title": "BSc Information Systems",
+                        "institute": "The Open University",
+                        "startingYear": "2020",
+                        "endingYear": "2022"
+                    },
+                    {
+                        "title": "BA Psychology",
+                        "institute": "University of Haifa",
+                        "startingYear": "2014",
+                        "endingYear": "2018"
+                    }]
+                }
+            },
+            "title": "About"
+        },
+        {
+            "type": "workExperience",
+            "data": [
+                {
+                    "company": "Microsoft",
+                    "title": "Fullstack Software Enginneer",
+                    "startingYear": 2020,
+                    "endingYear": null,
+                    "showWorkplaceName": false
+                },
+                {
+                    "company": "AT&T",
+                    "title": "Front End Engineer",
+                    "startingYear": 2019,
+                    "endingYear": 2020,
+                    "showWorkplaceName": false
+                },
+                {
+                    "company": "Plus500",
+                    "title": "Front End Engineer",
+                    "startingYear": 2017,
+                    "endingYear": 2019,
+                    "showWorkplaceName": false
+                },
+                {
+                    "company": "Intel",
+                    "title": "Student Software Engineer",
+                    "startingYear": 2017,
+                    "endingYear": 2017,
+                    "showWorkplaceName": false
+                }
+            ],
+            "title": "My Work Experience"
+        },
+        {
+            "type": "whatIKnow",
+            "data": [
+                {
+                    "logo": "react",
+                    "name": "React",
+                    "type": "Component frameworks / libraries",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "angular",
+                    "name": "Angular",
+                    "type": "Component frameworks / libraries",
+                    "isCurrentlyUsing": false
+                },
+                {
+                    "logo": "jest",
+                    "name": "Jest",
+                    "type": "Testing frameworks",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "nodejs",
+                    "name": "nodejs",
+                    "type": "Backend",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "styled-components",
+                    "name": "Styled Components",
+                    "type": "UI and Styling",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "js",
+                    "name": "JavaScript",
+                    "type": "Languages / Supersets",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "typescript",
+                    "name": "TypeScript",
+                    "type": "Languages / Supersets",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "java",
+                    "name": "Java",
+                    "type": "Languages / Supersets",
+                    "isCurrentlyUsing": false
+                },
+                {
+                    "logo": "mysql",
+                    "name": "MySQL",
+                    "type": "Databases",
+                    "isCurrentlyUsing": false
+                },
+                {
+                    "logo": "fluentui",
+                    "name": "Fluent UI",
+                    "type": "UI frameworks",
+                    "isCurrentlyUsing": true
+                },
+                {
+                    "logo": "chakraui",
+                    "name": "Chakra UI",
+                    "type": "UI frameworks",
+                    "isCurrentlyUsing": false
+                },
+                {
+                    "logo": "mui",
+                    "name": "Material UI",
+                    "type": "UI frameworks",
+                    "isCurrentlyUsing": false
+                }
+            ],
+            "display": "both",
+            "title": "What I Know (and use)"
+        },
+        {
+            "type": "volunteering",
+            "data": [
+                {
+                    "title": "Tech-Career",
+                    "description": "Tutoring and mentoring students in Web and other CS topics",
+                    "startingYear": "2020",
+                    "endingYear": null
+                },
+                {
+                    "title": "Sahar.org.il",
+                    "description": "Building a landing page for the group",
+                    "startingYear": "2015",
+                    "endingYear": "2015"
+                }
+            ],
+            "title": "Volunteer Work"
+        }
+    ]
+}

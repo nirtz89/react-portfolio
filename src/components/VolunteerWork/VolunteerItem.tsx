@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-interface IVolunteerItemProps {
+export interface IVolunteerItemProps {
     title: string;
     description: string;
 }

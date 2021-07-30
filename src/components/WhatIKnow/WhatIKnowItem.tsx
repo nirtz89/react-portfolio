@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { Badge, Tooltip } from '@chakra-ui/react';
 import { config, themeConfig } from '../../config';
-import { IWhatIKnowItem } from '../../data';
 
 const StyledWhatIKnowItem = styled.div`
     margin: 0 2em;
@@ -25,6 +24,23 @@ const StyledBadgeContainer = styled.div`
     left: .25em;
     z-index: 100;
 `;
+
+export enum EWhatIKnowItemType {
+    COMPONENT_FRAMRWORKS_LIBRARIES = 'Component frameworks / libraries',
+    TESTING_FRAMEWORKS = 'Testing frameworks',
+    BACKEND = 'Backend',
+    DATABASES = 'Databases',
+    UI_STYLING = 'UI and Styling',
+    UI_FRAMEWORKS = 'UI frameworks',
+    LANGUAGES_SUPERSETS = 'Languages / Supersets',
+}
+
+export interface IWhatIKnowItem {
+    logo: string;
+    name: string;
+    type?: EWhatIKnowItemType;
+    isCurrentlyUsing?: boolean;
+}
 
 const WhatIKnowItem = ({logo, name, isCurrentlyUsing = false}: IWhatIKnowItem) => {
     return (

@@ -1,16 +1,21 @@
 import React from 'react'
 import { StyledBackgroundCover, StyledBackgroundTopper, StyledCommonSection, StyledTitle } from '../../common/styles'
 import { config } from '../../config'
-import VolunteerItem from './VolunteerItem'
+import VolunteerItem, { IVolunteerItemProps } from './VolunteerItem'
 
-const VolunteerWork = () => {
+export interface IVolunteerWorkProps {
+    type: string,
+    data: IVolunteerItemProps[],
+    title: string
+}
+
+const VolunteerWork = ({data, title}: IVolunteerWorkProps) => {
     return (
         <StyledCommonSection backgroundUrl={`./assets/themes/${config.theme}/2.jpg`}>
                 <StyledBackgroundCover fadeAmount={40} />
                 <StyledBackgroundTopper>
-                <StyledTitle>Volunteer Work</StyledTitle>
-                <VolunteerItem title="Tech-Career" description="Tutoring and mentoring students in Web and other CS topics" />
-                <VolunteerItem title="Sahar" description="Building a landing page for the group" />
+                <StyledTitle>{title}</StyledTitle>
+                {data.map(vi => <VolunteerItem title={vi.title} description={vi.description} />)}
             </StyledBackgroundTopper>
         </StyledCommonSection>
     )

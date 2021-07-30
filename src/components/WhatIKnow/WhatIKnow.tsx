@@ -4,8 +4,7 @@ import Marquee from "react-fast-marquee";
 import styled from 'styled-components';
 import { StyledCommonSection, StyledTitle } from '../../common/styles';
 import { config, themeConfig } from '../../config';
-import { EWhatIKnowItemType, whatIKnowList } from '../../data';
-import WhatIKnowItem from './WhatIKnowItem';
+import WhatIKnowItem, { EWhatIKnowItemType, IWhatIKnowItem } from './WhatIKnowItem';
 import WhatIKnowListGroupContainer from './WhatIKnowListGroupContainer';
 
 const StyledWhatIKnow = styled.div`
@@ -18,27 +17,40 @@ const StyledWhatIKnowList = styled.div`
     width: 100%;
 `;
 
-const WhatIKnow = () => {
+enum EWhatIKnowDisplay {
+    LIST = "list",
+    MARQUEE = "marquee",
+    BOTH = "both"
+}
 
-    const [isList, setIsList] = useState(false);
+export interface IWhatIKnowProps {
+    type: string,
+    data: IWhatIKnowItem[],
+    display?: EWhatIKnowDisplay,
+    title: string
+}
+
+const WhatIKnow = ({data, display, title}: IWhatIKnowProps) => {
+
+    const [isList, setIsList] = useState(display === EWhatIKnowDisplay.LIST);
 
     return (
         <StyledCommonSection>
-            <StyledTitle>What I Know (and use)</StyledTitle>
-            <Button colorScheme={themeConfig[config.theme].color} variant="outline" size="xs" onClick={() => setIsList(!isList)}>{!isList ? 'View as list' : 'View as marquee'}</Button>
+            <StyledTitle>{title}</StyledTitle>
+            {display === EWhatIKnowDisplay.BOTH && <Button colorScheme={themeConfig[config.theme].color} variant="outline" size="xs" onClick={() => setIsList(!isList)}>{!isList ? 'View as list' : 'View as marquee'}</Button>}
             <StyledWhatIKnow>
                 {
                 !isList ?
                 <Marquee speed={50} pauseOnHover={true}>
-                    {whatIKnowList.map((item, index) => 
+                    {data.map((item, index) => 
                         <WhatIKnowItem key={index} logo={item.logo} name={item.name} isCurrentlyUsing={item.isCurrentlyUsing} />
                     )}
                 </Marquee> :
                 <StyledWhatIKnowList>
                     {
                         (Object.keys(EWhatIKnowItemType) as Array<keyof typeof EWhatIKnowItemType>).map((key, index) => {
-                            const whatIKnowTypeGroup = whatIKnowList.filter((wik) => wik.type === EWhatIKnowItemType[key]);
-                            return whatIKnowTypeGroup.length > 0 && <WhatIKnowListGroupContainer key={index} title={key.toString()} group={whatIKnowTypeGroup}/>
+                            const whatIKnowTypeGroup = data.filter((wik) => wik.type === EWhatIKnowItemType[key]);
+                            return whatIKnowTypeGroup.length > 0 && <WhatIKnowListGroupContainer key={index} title={EWhatIKnowItemType[key]} group={whatIKnowTypeGroup}/>
                         })
                     }
                 </StyledWhatIKnowList>

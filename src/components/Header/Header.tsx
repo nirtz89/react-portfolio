@@ -5,8 +5,12 @@ import { config, themeConfig } from '../../config'
 import Navigation from './Navigation'
 
 interface IHeaderProps {
-    name: string;
-    title: string;
+    data: {
+        name: string,
+        title: string,
+        showProfilePic: boolean,
+        cvLink: string | null
+    }
 }
 
 const StyledHeader = styled.div`
@@ -42,14 +46,14 @@ const StyledImage = styled.img`
 `;
 
 
-const Header = ({name, title}:IHeaderProps) => {
+const Header = ({data: {name, title, showProfilePic, cvLink}}:IHeaderProps) => {
     return (
         <StyledHeader>
             <Navigation />
-            <StyledImage src="./assets/profile.jpg" />
+            {showProfilePic && <StyledImage src="./assets/profile.jpg" />}
             <StyledName>{name}</StyledName>
             <StyledWorkTitle>{title}</StyledWorkTitle>
-            <Button colorScheme="gray" style={{color: "white"}} _hover={{color: themeConfig[config.theme].darker}} _pressed={{color: themeConfig[config.theme].darker}} mt="4" variant="outline" size="md">Download my CV</Button>
+            {cvLink && <Button colorScheme="gray" style={{color: "white"}} _hover={{color: themeConfig[config.theme].darker}} _pressed={{color: themeConfig[config.theme].darker}} mt="4" variant="outline" size="md">Download my CV</Button>}
         </StyledHeader>
     )
 }

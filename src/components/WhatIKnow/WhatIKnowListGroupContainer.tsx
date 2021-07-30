@@ -1,8 +1,8 @@
 import { Badge } from '@chakra-ui/react';
 import React from 'react'
 import styled from 'styled-components';
-import { StyledSecondaryTitle } from '../../common/styles'
-import { IWhatIKnowItem } from '../../data';
+import { StyledSecondaryTitle } from '../../common/styles';
+import { IWhatIKnowItem } from './WhatIKnowItem';
 
 interface IWhatIKnowListGroupContainerProps {
     group: IWhatIKnowItem[];
