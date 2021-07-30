@@ -2,7 +2,8 @@ import { theme } from "@chakra-ui/react"
 
 enum Theme {
     DESERT = "desert",
-    AURORA = "aurora"
+    AURORA = "aurora",
+    ABSTRACT = "abstract"
 }
 
 export const themeConfig = {
@@ -15,9 +16,14 @@ export const themeConfig = {
         color: "purple",
         main: theme.colors.purple[600],
         darker: theme.colors.purple[800],
+    },
+    [Theme.ABSTRACT]: {
+        color: "purple",
+        main: theme.colors.purple[600],
+        darker: theme.colors.purple[800],
     }
 }
 
 export const config = {
-    theme: Theme.DESERT
+    theme: Theme.ABSTRACT
 }
