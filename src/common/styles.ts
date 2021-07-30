@@ -62,9 +62,14 @@ export const StyledBackgroundTopper = styled.div`
     align-items: center;
 `;
 
-export const StyledParagraph = styled.p`
+interface IStyledParagraphOverridePrpops {
+    paddingTop?: number;
+    paddingBottom?: number;
+}
+
+export const StyledParagraph = styled.p<IStyledParagraphOverridePrpops>`
     color: ${themeConfig[config.theme].darker};
     text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: ${props => `${props.paddingTop || 1}em`};
+    padding-bottom: ${props => `${props.paddingBottom || 1}em`};
 `;

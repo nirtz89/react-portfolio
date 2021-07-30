@@ -53,7 +53,7 @@ const Header = ({data: {name, title, showProfilePic, cvLink}}:IHeaderProps) => {
             {showProfilePic && <StyledImage src="./assets/profile.jpg" />}
             <StyledName>{name}</StyledName>
             <StyledWorkTitle>{title}</StyledWorkTitle>
-            {cvLink && <Button colorScheme="gray" style={{color: "white"}} _hover={{color: themeConfig[config.theme].darker}} _pressed={{color: themeConfig[config.theme].darker}} mt="4" variant="outline" size="md">Download my CV</Button>}
+            {cvLink && <Button colorScheme="gray" style={{color: "white"}} _hover={{color: themeConfig[config.theme].darker}} _pressed={{color: themeConfig[config.theme].darker}} onClick={() => window.open(cvLink)} mt="4" variant="outline" size="md">Download my CV</Button>}
         </StyledHeader>
     )
 }
