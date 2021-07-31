@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import { StyledTitle, StyledCommonSection, StyledParagraph, StyledSecondaryTitle } from '../../common/styles'
+import { IModuleBase } from '../../contracts';
 import EducationItem, { IEducationItem } from './EducationItem'
 
-export interface IAboutProps {
-        index: number;
-        type: string;
-        data: any;
-        title: string;
+export interface IAboutProps extends IModuleBase {
+    data: any;
 }
 
 const StyledAbout = styled.div`

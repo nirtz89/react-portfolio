@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export interface IVolunteerItemProps {
     title: string;
     description: string;
-    startingYear?: number;
-    endingYear?: number;
+    startingYear?: string;
+    endingYear?: string;
 }
 
 const StyledVolunteerItem = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyledBackgroundCover, StyledBackgroundTopper, StyledCommonSection, StyledTitle } from '../../common/styles'
 import { config } from '../../config'
+import { IModuleBase } from '../../contracts'
 import Workplace from './WorkplaceItem'
 
 export interface IWorkplace {
@@ -11,11 +12,8 @@ export interface IWorkplace {
     showWorkplaceName?: boolean;
     showWorkplaceImage?: boolean;
 }
-export interface IWorkExperienceProps {
-    index: number;
-    type: string;
+export interface IWorkExperienceProps extends IModuleBase {
     data: IWorkplace[];
-    title: string;
 }
 
 const WorkExperience = ({data, title, index}: IWorkExperienceProps) => {

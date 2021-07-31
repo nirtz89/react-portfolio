@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 import styled from 'styled-components';
 import { StyledCommonSection, StyledTitle } from '../../common/styles';
 import { config, themeConfig } from '../../config';
+import { IModuleBase } from '../../contracts';
 import WhatIKnowItem, { EWhatIKnowItemType, IWhatIKnowItem } from './WhatIKnowItem';
 import WhatIKnowListGroupContainer from './WhatIKnowListGroupContainer';
 
@@ -23,12 +24,9 @@ enum EWhatIKnowDisplay {
     BOTH = "both"
 }
 
-export interface IWhatIKnowProps {
-    index: number;
-    type: string;
+export interface IWhatIKnowProps extends IModuleBase {
     data: IWhatIKnowItem[];
     display?: EWhatIKnowDisplay;
-    title: string;
 }
 
 const WhatIKnow = ({data, display, title, index}: IWhatIKnowProps) => {

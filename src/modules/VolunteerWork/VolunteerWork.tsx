@@ -1,13 +1,11 @@
 import React from 'react'
 import { StyledBackgroundCover, StyledBackgroundTopper, StyledCommonSection, StyledTitle } from '../../common/styles'
 import { config } from '../../config'
+import { IModuleBase } from '../../contracts'
 import VolunteerItem, { IVolunteerItemProps } from './VolunteerItem'
 
-export interface IVolunteerWorkProps {
-    index: number;
-    type: string;
+export interface IVolunteerWorkProps extends IModuleBase {
     data: IVolunteerItemProps[];
-    title: string;
 }
 
 const VolunteerWork = ({data, title, index}: IVolunteerWorkProps) => {
