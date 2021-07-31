@@ -1,4 +1,4 @@
-#🚀 React-Portfolio 🚀
+# 🚀 React-Portfolio 🚀
 
 Cookie cutter react portfolio suited perfectly for *Github Pages*, get up and running in **less then 5 minutes**, just edit the `data.json` file and off you go!
 
@@ -24,7 +24,7 @@ Install in 5 easy steps
 4. Run `yarn` from your favourite CLI
 5. Run `yarn deploy` and watch the magic happens
 
-Your react portfolio is waiting for you at `{your-github-username}.github.io/react-portfolio}`
+Your react portfolio is waiting for you at `{your-github-username}.github.io/react-portfolio}`  
 *Please note that you have to enable *github pages* in your new forked branch, and point it to "gh-pages" branch after deploying it (step 5).
 
 ## Customization
@@ -37,7 +37,7 @@ In order to add a module or change a module in your portfolio, simply edit `data
 Let's say we want to add another *About* section, simply add it in your `data.json` at the wanted position.  
   
   ```json
-[...,
+[...
     {
         "type": "about",
         "data": {
