@@ -37,7 +37,7 @@ In order to add a module or change a module in your portfolio, simply edit `data
 Let's say we want to add another *About* section, simply add it in your `data.json` at the wanted position.  
   
   ```json
-[...,
+[...
     {
         "type": "about",
         "data": {
