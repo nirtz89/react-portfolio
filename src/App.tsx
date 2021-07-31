@@ -27,18 +27,18 @@ function App() {
   return (
     <ChakraProvider>
       <StyledApp>
-        <Header data={data.header} />
-        {data.modules.map(module => {
+        <Header data={data.header} modules={data.modules} />
+        {data.modules.map((module, index) => {
           console.log(module);
           switch (module.type) {
             case Module.ABOUT:
-              return <About {...module as IAboutProps} />
+              return <About {...module as IAboutProps} index={index} key={index} />
             case Module.WORK_EXPERIENCE:
-              return <WorkExperience {...module as IWorkExperienceProps} />
+              return <WorkExperience {...module as IWorkExperienceProps} index={index} key={index} />
             case Module.WHAT_I_KNOW:
-              return <WhatIKnow {...module as IWhatIKnowProps} />
+              return <WhatIKnow {...module as IWhatIKnowProps} index={index} key={index} />
             case Module.VOLUNTEERING:
-              return <VolunteerWork {...module as IVolunteerWorkProps} />
+              return <VolunteerWork {...module as unknown as IVolunteerWorkProps} index={index} key={index} />
             default:
               return <></>
           }

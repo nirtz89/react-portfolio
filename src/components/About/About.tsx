@@ -4,9 +4,10 @@ import { StyledTitle, StyledCommonSection, StyledParagraph, StyledSecondaryTitle
 import EducationItem, { IEducationItem } from './EducationItem'
 
 export interface IAboutProps {
-        type: string,
-        data: any,
-        title: string
+        index: number;
+        type: string;
+        data: any;
+        title: string;
 }
 
 const StyledAbout = styled.div`
@@ -18,9 +19,9 @@ const StyledAbout = styled.div`
     margin: 0 auto;
 `;
 
-const About = ({data, title}: IAboutProps) => {
+const About = ({data, title, index}: IAboutProps) => {
     return (
-        <StyledCommonSection>
+        <StyledCommonSection id={`module-${index}`}>
             <StyledAbout>
                 <StyledTitle>{title}</StyledTitle>
                 <StyledParagraph paddingTop="0">{data.about}</StyledParagraph>

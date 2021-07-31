@@ -12,14 +12,15 @@ export interface IWorkplace {
     showWorkplaceImage?: boolean;
 }
 export interface IWorkExperienceProps {
-    type: string,
-    data: IWorkplace[],
-    title: string
+    index: number;
+    type: string;
+    data: IWorkplace[];
+    title: string;
 }
 
-const WorkExperience = ({data, title}: IWorkExperienceProps) => {
+const WorkExperience = ({data, title, index}: IWorkExperienceProps) => {
     return (
-        <StyledCommonSection backgroundUrl={`./assets/themes/${config.theme}/1.jpg`}>
+        <StyledCommonSection backgroundUrl={`./assets/themes/${config.theme}/1.jpg`} id={`module-${index}`}>
             <StyledBackgroundCover fadeAmount={40} />
                 <StyledBackgroundTopper>
                 <StyledTitle>{title}</StyledTitle>

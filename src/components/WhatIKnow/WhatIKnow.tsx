@@ -24,18 +24,19 @@ enum EWhatIKnowDisplay {
 }
 
 export interface IWhatIKnowProps {
-    type: string,
-    data: IWhatIKnowItem[],
-    display?: EWhatIKnowDisplay,
-    title: string
+    index: number;
+    type: string;
+    data: IWhatIKnowItem[];
+    display?: EWhatIKnowDisplay;
+    title: string;
 }
 
-const WhatIKnow = ({data, display, title}: IWhatIKnowProps) => {
+const WhatIKnow = ({data, display, title, index}: IWhatIKnowProps) => {
 
     const [isList, setIsList] = useState(display === EWhatIKnowDisplay.LIST);
 
     return (
-        <StyledCommonSection>
+        <StyledCommonSection id={`module-${index}`}>
             <StyledTitle>{title}</StyledTitle>
             {display === EWhatIKnowDisplay.BOTH && <Button colorScheme={themeConfig[config.theme].color} variant="outline" size="xs" onClick={() => setIsList(!isList)}>{!isList ? 'View as list' : 'View as marquee'}</Button>}
             <StyledWhatIKnow>

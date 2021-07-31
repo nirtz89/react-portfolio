@@ -10,7 +10,8 @@ interface IHeaderProps {
         title: string,
         showProfilePic: boolean,
         cvLink: string | null
-    }
+    };
+    modules: any[];
 }
 
 const StyledHeader = styled.div`
@@ -46,10 +47,10 @@ const StyledImage = styled.img`
 `;
 
 
-const Header = ({data: {name, title, showProfilePic, cvLink}}:IHeaderProps) => {
+const Header = ({data: {name, title, showProfilePic, cvLink}, modules}:IHeaderProps) => {
     return (
         <StyledHeader>
-            <Navigation />
+            <Navigation modules={modules} />
             {showProfilePic && <StyledImage src="./assets/profile.jpg" />}
             <StyledName>{name}</StyledName>
             <StyledWorkTitle>{title}</StyledWorkTitle>
