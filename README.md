@@ -1,46 +1,108 @@
-# Getting Started with Create React App
+#🚀 React-Portfolio 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cookie cutter react portfolio suited perfectly for *Github Pages*, get up and running in **less then 5 minutes**, just edit the `data.json` file and off you go!
 
-## Available Scripts
+Watch in action: [Click here](https://nirtz89.github.io/react-portfolio).
 
-In the project directory, you can run:
+Fueled by [Chakra-UI](https://chakra-ui.com/).
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Installation](#installation)
+- [Customization](#usage)
+- [Themes](#themes)
+- [Support](#support)
+- [Contributing](#contributing)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+Install in 5 easy steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Fork this repo
+2. Edit `data.json` and `config.ts` to fit your needs
+3. Change `package.json` homepage property to `{your-github-username}.github.io/react-portfolio`
+4. Run `yarn` from your favourite CLI
+5. Run `yarn deploy` and watch the magic happens
 
-### `yarn build`
+Your react portfolio is waiting for you at `{your-github-username}.github.io/react-portfolio}`
+*Please note that you have to enable *github pages* in your new forked branch, and point it to "gh-pages" branch after deploying it (step 5).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Customization
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React-Portfolio is built on modules, each in its own sub-folder inside the modules main folder
+Each module has its own properties defined by it's TypeScript interface, *all modules extend the `IModuleBase` interface*.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In order to add a module or change a module in your portfolio, simply edit `data.json` with the required properties.
 
-### `yarn eject`
+Let's say we want to add another *About* section, simply add it in your `data.json` at the wanted position.  
+  
+  ```json
+[...,
+    {
+        "type": "about",
+        "data": {
+            "about": "This is another About module",
+            "education": {
+                "title": "Education",
+                "data": [
+                {
+                    "title": "BSc Information Systems",
+                    "institute": "University of Haifa",
+                    "startingYear": "2014",
+                    "endingYear": "2018"
+                },
+                {
+                    "title": "BA Psychology",
+                    "institute": "The Open University",
+                    "startingYear": "2020",
+                    "endingYear": "2022"
+                }]
+            }
+        },
+        "title": "About"
+    }
+]
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Themes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React-portfolio comes bundled with 5 out-of-the-box themes.
+Those include **Desert, Aurora, Abstract, Hightech and Mellow**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Adding themes is super-easy! Here's how it's done:  
+- Open a new sub-folder under the themes folder.
+- Name it whatever you want (no spaces).
+- Add 3 images, named `bg.jpg`, `1.jpg` and `2.jpg` (keep those under 100kb each).
+- Add your theme inside the `config.ts` file, like so:  
+```ts
+enum Theme {
+    ...
+    MY_THEME = "my_theme"
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+export const themeConfig = {
+    ...
+    [Theme.MY_THEME]: {
+        color: "red",
+        main: theme.colors.red[600],
+        darker: theme.colors.red[800],
+    }
+}
 
-## Learn More
+export const config = {
+    theme: Theme.MY_THEME
+}
+```
+- Please note that the themes colors are taken from [Chakra-UI color scheme](https://chakra-ui.com/docs/theming/theme), so use those.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+And that's it!
+*Is your theme awesome? Share it with the world, open a PR for it.*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Support
+
+Please [open an issue](https://github.com/nirtz89/react-portfolio/issues/new) for support.
+
+## Contributing
+
+Fixing bugs and adding modules is always welcome.
+Create a branch, add commits, and [open a pull request](https://github.com/nirtz89/react-portfolio/compare).

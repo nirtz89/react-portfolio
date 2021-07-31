@@ -15,15 +15,15 @@
                     "data": [
                     {
                         "title": "BSc Information Systems",
-                        "institute": "The Open University",
-                        "startingYear": "2020",
-                        "endingYear": "2022"
-                    },
-                    {
-                        "title": "BA Psychology",
                         "institute": "University of Haifa",
                         "startingYear": "2014",
                         "endingYear": "2018"
+                    },
+                    {
+                        "title": "BA Psychology",
+                        "institute": "The Open University",
+                        "startingYear": "2020",
+                        "endingYear": "2022"
                     }]
                 }
             },
