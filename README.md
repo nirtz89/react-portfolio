@@ -1,4 +1,4 @@
-#🚀 React-Portfolio 🚀
+# 🚀 React-Portfolio 🚀
 
 Cookie cutter react portfolio suited perfectly for *Github Pages*, get up and running in **less then 5 minutes**, just edit the `data.json` file and off you go!
 
