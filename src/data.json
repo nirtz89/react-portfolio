@@ -2,7 +2,7 @@
     "header": {
         "name": "Nir Tzezana",
         "title": "Full Stack Software Engineer",
-        "showProfilePic": true,
+        "showProfilePic": false,
         "cvLink": "http://www.walla.co.il",
         "linkedIn": "https://www.linkedin.com/in/nir-tzezana-918a376b/",
         "stackOverflow": "https://stackoverflow.com/users/2324434/nir-tzezana",
