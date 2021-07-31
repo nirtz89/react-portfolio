@@ -24,7 +24,7 @@ Install in 5 easy steps
 4. Run `yarn` from your favourite CLI
 5. Run `yarn deploy` and watch the magic happens
 
-Your react portfolio is waiting for you at `{your-github-username}.github.io/react-portfolio}`
+Your react portfolio is waiting for you at `{your-github-username}.github.io/react-portfolio}`  
 *Please note that you have to enable *github pages* in your new forked branch, and point it to "gh-pages" branch after deploying it (step 5).
 
 ## Customization
